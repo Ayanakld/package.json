@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    background-color: #ffffff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.logo {
+    letter-spacing: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+
+.nav-links a:hover {
+    color: #a3a3a3;
+    transition: all 0.3s ease;
+}
+
+.nav-user {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+}
+
+.nav-user li {
+    list-style: none;
+}
+
+.nav-user a {
+    text-decoration: none;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+}
+
+.nav-user a:hover {
+    color: #a3a3a3;
+    transition: all 0.3s ease;
+}
+
+.login {
+    background-color: #8BCC00;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+}
+
+.login a {
+    color: white;
+}
+
+.login a:hover {
+    color: white;
+}
+
+.login:hover {
+    background-color: #6b9a05;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.account {
+    display: none;
+    cursor: pointer;
+}
+
+.account i {
+    color: #000000;
+}
+
+.toggles {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 10%;
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        overflow-x: hidden;
+    }
+    .toggles {
+        display: flex;
+    }
+    .nav-user {
+        display: none;
+    }
+    .nav-links {
+        position: absolute;
+        display: flex;
+        right: 0px;
+        flex-direction: column;
+        top: 9vh;
+        background-color: #838383;
+        height: 92vh;
+        transform: translate(100%);
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-user {
+        position: absolute;
+    }
+    .account {
+        display: block;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translate(0%);
+}
