@@ -5,7 +5,6 @@ body {
 }
 
 * {
-    outline: solid 1px red;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -222,7 +221,7 @@ nav {
     cursor: pointer;
 }
 
-.hero{
+.hero {
     width: 100%;
     height: 100vh;
     background-image: url("http://localhost:3001/images/header.png");
@@ -230,9 +229,27 @@ nav {
     background-position: center;
     position: relative;
     overflow: hidden;
+    background-repeat: no-repeat;
 }
+
+
 
 
 #footfetish ,.text-muted {
     margin-left: 50px;
+}
+.textt{
+    background: #8BCC00;
+    width:211px;
+    border: 12px;
+    padding: 30px 10px;
+    outline: none;
+    color : black;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    margin-left: 100px;
+    margin-top: 200px;
+
 }
