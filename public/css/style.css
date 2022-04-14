@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 * {
+    outline: solid 1px red;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -170,7 +172,7 @@ nav {
 .nav-active {
     transform: translate(0%);
 }
-.row{
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,7 +200,6 @@ nav {
 
 
 .col-1 h1{
-    font-family: Roboto;
     font-size: 40px;
     color: #EBEBEB;
     font-weight: 100;
@@ -224,9 +225,14 @@ nav {
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url(header.png);
-    background-size: cover;
+    background-image: url("http://localhost:3001/images/header.png");
+    background-size: 104%;
     background-position: center;
     position: relative;
     overflow: hidden;
+}
+
+
+#footfetish ,.text-muted {
+    margin-left: 50px;
 }
