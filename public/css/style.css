@@ -170,3 +170,63 @@ nav {
 .nav-active {
     transform: translate(0%);
 }
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 140px;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2{
+    font-size: 55px;
+}
+
+
+.col-1 h3{
+    font-size: 20px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+
+.col-1 h1{
+    font-family: Roboto;
+    font-size: 40px;
+    color: #EBEBEB;
+    font-weight: 100;
+    line-height: 27px;
+    margin-bottom: 35px;
+}
+
+
+
+.button1 {
+    margin-left: 300px;
+    margin-top: 200px;
+    background: #1B1C31;
+    width:211px;
+    border: 12px;
+    padding: 30px 10px;
+    outline: none;
+    color : #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(header.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
