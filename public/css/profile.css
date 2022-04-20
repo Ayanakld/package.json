@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.containeeeer {
+    width: 1160px;
+    height: 700px;
+    background-color: #C4C4C459;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.prof{
+    color: #000000;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 46px;
+    margin-left: 200px;
+    margin-top: 60px;
+
+}
+
+#logoutt{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#settingss{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#create{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 70px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+}
+.basics{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+}
+.nobasics{
+    color: #FF0000;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 47px;
+
+
+}
+#ss{
+    margin-left: 88px;
+}
+#w3{
+    margin-top: 14px;
+    width: 600px;
+    background-color: #8BCC00;
+
+}
