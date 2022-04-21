@@ -10,6 +10,7 @@ app.use(express.static(__dirname + "/public"));
 app.set("public", path.join(__dirname, "public"));
 
 app.use("/", require("./routes/root"));
+app.use("/vacancies", require("./routes/vacancies"));
 app.use("/regis", require("./routes/registration"));
 app.use("/login", require("./routes/login"));
 app.use("/profile", require("./routes/profile"));

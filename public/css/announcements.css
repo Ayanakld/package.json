@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.row{
+    position: absolute;
+    width: 279px;
+    height: 43px;
+    left: 80px;
+    top: 100px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.search-box{
+    position: absolute;
+    top: 20%;
+    left: 82%;
+    transform: translate(-50%,-50%);
+    background: rgba(121, 175, 4, 0.19);;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-box:hover > input{
+    width: 200px;
+    padding: 0 10px;
+}
+.search-box:hover > .icon{
+    background: #8BCC00;
+}
+.icon:hover{
+    transform: rotate(360deg) scale(0.8);
+}
+input{
+    width: 0;
+    border: none;
+    outline: none;
+    padding: 0;
+    background: none;
+    font-size: 1.1rem;
+    transition: 0.5s ease;
+    line-height: 40px;
+    color: black;
+}
+.icon{
+    color: white;
+    float: right;
+    width: 40px;
+    font-size: 1.3rem;
+    height: 40px;
+    border-radius: 50%;
+    background: #8BCC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
