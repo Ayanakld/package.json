@@ -27,7 +27,7 @@
     margin-left: 100px;
 }
 #settingss{
-    margin-top: 100px;
+    margin-top: 20px;
     margin-left: 100px;
 }
 #create{
@@ -58,5 +58,6 @@
     margin-top: 14px;
     width: 600px;
     background-color: #8BCC00;
+    height: 100px;
 
 }
