@@ -1,9 +1,22 @@
 const express = require("express");
-var path = require("path");
+const path = require("path");
 const config = require('config');
 const mongoose = require("mongoose");
+const passport = require("passport");
+const expressSession = require("express-session");
+
+
 const app = express();
 
+const handlebars = require('express3-handlebars').create();
+app.engine('handlebars', handlebars.engine)
+app.set('view-engine', 'handlebars')
+
+// @passport and express session is used to handle the authorization processes
+app.use(express.urlencoded({extended:false}))
+app.use(expressSession({secret: 'mySecretKey'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set("port", process.env.PORT || 3001);
 
@@ -30,7 +43,7 @@ async function start() {
         });
 
     } catch (e) {
-        console.log('Server Error: ', e.message)
+        console.log('Server Error:  ', e.message)
         process.exit(1);
     }
 }
