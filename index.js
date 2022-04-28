@@ -3,7 +3,7 @@ const path = require("path");
 const config = require('config');
 const mongoose = require("mongoose");
 const passport = require("passport");
-const expressSession = require("express-session");
+const session = require("express-session");
 
 
 const app = express();
@@ -14,9 +14,16 @@ app.set('view-engine', 'handlebars')
 
 // @passport and express session is used to handle the authorization processes
 app.use(express.urlencoded({extended:false}))
-app.use(expressSession({secret: 'mySecretKey'}));
+app.use(session({secret: 'mySecretKey'}));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(session({cookie: {maxAge: null}}))
+
+app.use((req, res, next)=> {
+    res.locals.message = req.session.message
+    delete req.session.message
+    next()
+})
 
 app.set("port", process.env.PORT || 3001);
 

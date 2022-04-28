@@ -11,7 +11,12 @@
     <title>Sign Up</title>
 </head>
 <body>
-
+{{#if (message) }}
+<div style="text-align: center" class="alert alert-{{message.type}}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>{{message.intro}}</strong> {{message.message}}
+</div>
+{{/if}}
 <nav>
     <div class="logo">
         <a href="/">RUDA</a>
@@ -33,7 +38,7 @@
     <ul class="nav-user ">
         <li><a href=" ">Create resume</a></li>
         <button class="login ">
-            <a href="/regis">Log In</a>
+            <a href="/login">Log In</a>
         </button>
     </ul>
     <div class="toggles ">
