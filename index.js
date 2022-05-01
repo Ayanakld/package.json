@@ -36,6 +36,7 @@ app.use("/vacancies", require("./routes/vacancies"));
 app.use("/regis", require("./routes/registration"));
 app.use("/login", require("./routes/login"));
 app.use("/profile", require("./routes/profile"));
+app.use("/createvacancy", require("./routes/createvacancy"))
 
 async function start() {
     try {
