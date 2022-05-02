@@ -4,13 +4,15 @@ const config = require('config');
 const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
+const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 
 const app = express();
 
-const handlebars = require('express3-handlebars').create();
-app.engine('handlebars', handlebars.engine)
-app.set('view-engine', 'handlebars')
+// const handlebars = require('express3-handlebars').create();
+// app.engine('handlebars', handlebars.engine)
+// app.set('view-engine', 'handlebars')
 
 // @passport and express session is used to handle the authorization processes
 app.use(express.urlencoded({extended:false}))
@@ -18,6 +20,7 @@ app.use(session({secret: 'mySecretKey'}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(session({cookie: {maxAge: null}}))
+app.use(bodyParser.json());
 
 app.use((req, res, next)=> {
     res.locals.message = req.session.message

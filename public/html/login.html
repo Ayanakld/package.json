@@ -50,7 +50,7 @@
 
 <div class="formes">
 
-    <form action=" " class="regbox">
+    <form id="regbox" action="/login" method="post" class="regbox">
         <h1 class="tittle">Log In</h1>
 
         <div class="row ">
@@ -79,7 +79,32 @@
 
     </form>
 </div>
+<!--<script>-->
+<!--    const form = document.getElementById('regbox')-->
+<!--    form.addEventListener('submit', registerUser)-->
 
+<!--    async function registerUser(event) {-->
+<!--        event.preventDefault()-->
+<!--        const email = document.getElementById('email').value-->
+<!--        const password = document.getElementById('password').value-->
+
+<!--        const result = await fetch("/login", {-->
+<!--            method: 'post',-->
+<!--            header: {-->
+<!--                'Content-Type': 'application/json'-->
+<!--            },-->
+<!--            // body: JSON.stringify({-->
+<!--            //     email,-->
+<!--            //     password-->
+<!--            // })-->
+<!--        }).then((res) => res.json())-->
+<!--        if (result.status === 'ok') {-->
+
+<!--        } else {-->
+<!--            alert(result.error)-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
 
 </body>
 </html>

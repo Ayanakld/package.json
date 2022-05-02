@@ -5,68 +5,22 @@ const router = express.Router();
 var path = require('path');
 router
     .route("/")
-    .get((req, res) => res.render(path.resolve("public/html/registration.handlebars")))
+    .get((req, res) => res.sendFile(path.resolve("public/html/registration.html")))
     .post(async (req, res) => {
         const {name, surname, email, date, password: plainTextPassword } = req.body
-
-        if (!name || typeof name !== 'string') {
-            return res.json({
-                status:'error',
-                error:"Invalid username"
-            })
-            // req.session.message = {
-            //     type: 'danger',
-            //     intro: 'Empty fields',
-            //     message: 'Please fill the username field.'
-            // }
-        }
-        if (!surname || typeof surname !== 'string') {
-            return res.json({
-                status:'error',
-                error:"Invalid surname"
-            })
-            // req.session.message = {
-            //     type: 'danger',
-            //     intro: 'Empty fields',
-            //     message: 'Please fill the surname field.'
-            // }
-        }
-        if (!plainTextPassword || typeof plainTextPassword !== 'string') {
-            return res.json({
-                status: 'error',
-                error: "Invalid password"
-            })
-            // req.session.message = {
-            //     type: 'danger',
-            //     intro: 'Empty fields',
-            //     message: 'Please fill the password field.'
-            // }
-        }
         if (plainTextPassword.length < 5) {
             return res.json({
                 status:'error',
                 error: "Invalid password, should be at least 6 characters"
             })
-            // req.session.message = {
-            //     type: 'danger',
-            //     intro: 'Not proper password',
-            //     message: 'Your password must contain at least 6 characters.'
-            // }
         }
-
-
         const conpass = req.body.conpass
-        const password = await bcrypt.hash(plainTextPassword, 11)
+        const password = await bcrypt.hash(plainTextPassword, 10)
         if (conpass !== plainTextPassword) {
             return res.json({
                 status:'error',
                 error: "Passwords are not the same"
             })
-            // req.session.message = {
-            //     type: 'danger',
-            //     intro: 'Not proper password',
-            //     message: 'Your passwords must be the same'
-            // }
         }
 
 
@@ -87,8 +41,9 @@ router
                 })
             }
             console.log(e)
-            return res.json({status: 'error'})
+            return res.json({status: 'error', error: "Something went wrong... Please try again"})
         }
-        res.render(path.resolve("public/html/login.ejs"))
+        res.sendFile(path.resolve("public/html/login.html"))
+        // res.json({status: 'ok'})
     })
 module.exports = router;

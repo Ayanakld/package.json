@@ -11,12 +11,6 @@
     <title>Sign Up</title>
 </head>
 <body>
-{{#if (message) }}
-<div style="text-align: center" class="alert alert-{{message.type}}">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>{{message.intro}}</strong> {{message.message}}
-</div>
-{{/if}}
 <nav>
     <div class="logo">
         <a href="/">RUDA</a>
@@ -55,14 +49,15 @@
 
 
 <div class="formes">
-    <form action="/regis" method="POST" class="regbox">
+<!--    action="/regis" method="POST" -->
+    <form class="regbox" action="/regis" method="POST" id="regbox">
         <h1 class="tittle">Registration</h1>
         <div class="row ">
             <div class="col-3 ">
                 <p class="labels">Name:</p>
             </div>
             <div class="col-8 ">
-                <input type="text" id="name" name="name" required>
+                <input type="text" autocomplete="off" id="name" name="name" required>
             </div>
         </div>
         <div class="row ">
@@ -70,7 +65,7 @@
                 <p class="labels">Surname:</p>
             </div>
             <div class="col-8 ">
-                <input type="text" id="surname" name="surname" required>
+                <input type="text" autocomplete="off" id="surname" name="surname" required>
             </div>
         </div>
         <div class="row ">
@@ -87,7 +82,7 @@
                 <p class="labels">E-mail:</p>
             </div>
             <div class="col-8 ">
-                <input type="text" id="email" name="email" required>
+                <input type="text" autocomplete="off" id="email" name="email" required>
             </div>
         </div>
         <div class="row ">
@@ -95,7 +90,7 @@
                 <p class="labels">Password:</p>
             </div>
             <div class="col-8 ">
-                <input type="password" id="password" name="password" >
+                <input type="password" autocomplete="off" id="password" name="password" >
             </div>
         </div>
         <div class="row ">
@@ -103,7 +98,7 @@
                 <p class="labels">Confirm:</p>
             </div>
             <div class="col-8 ">
-                <input type="password" id="conpass" name="conpass">
+                <input type="password" autocomplete="off" id="conpass" name="conpass">
             </div>
         </div>
         <div class="confirm">
@@ -114,6 +109,39 @@
         </div>
     </form>
 </div>
-
+<script>
+    // const form = document.getElementById('regbox')
+    // form.addEventListener('submit', registerUser)
+    //
+    // async function registerUser(event) {
+    //     event.preventDefault()
+    //     const name = document.getElementById('name').value
+    //     const surname = document.getElementById('surname').value
+    //     const date = document.getElementById('date').value
+    //     const email = document.getElementById('email').value
+    //     const password = document.getElementById('password').value
+    //     const conpass = document.getElementById('conpass').value
+    //
+    //     const result = await fetch("/regis", {
+    //         method: 'post',
+    //         header: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //         // body: JSON.stringify({
+    //         //     name,
+    //         //     surname,
+    //         //     date,
+    //         //     email,
+    //         //     password,
+    //         //     conpass
+    //         // })
+    //     }).then((res) => res.json())
+    // //     console.log(result)
+    //     if (result.status === 'ok') {
+    //
+    //     } else {
+    //         alert(result.error)
+    //     }
+</script>
 </body>
 </html>
