@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs")
+const axios = require('axios')
 // needed this at the level but now i dont now why
 // const jwt = require('jsonwebtoken')
 // const JWT_SECRET = "AUJsdfH@#$%^&sdfVCdfdfd%^&*()_FGFRsfdsdDYTf#$%^&*(sd^^fsERBVF%^&*FYVygesbfmsbdkjfsad"
@@ -22,11 +23,12 @@ router
                 id: user._id,
                 email: user.email,
                 name: user.name,
-                surname: user.surname
+                surname: user.surname,
+                date: user.date
             }
-            console.log(token)
+
             // return res.json({status:'ok', data: token})
-            return res.sendFile(path.resolve('public/html/profile.html'))
+            return res.render(path.resolve('public/html/myprofile.ejs'), {users: token})
         }
 
         res.json({status:'error', error:"Invalid email/password2"})

@@ -21,7 +21,20 @@ const UserSchema = new mongoose.Schema(
         password: {
                 type: String,
                 required: true
-        }
+        },
+            gender: {
+                type: Boolean
+            },
+            phone: {
+                type: String,
+                    unique: true
+        },
+            address: {
+                type:String
+            },
+            site: {
+                type: String
+            }
     },
     { collection: 'users' }
 )

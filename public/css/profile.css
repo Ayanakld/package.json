@@ -428,6 +428,30 @@ html {
 }
 
 .myprof{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 23px;
+    /* identical to box height */
+    color: #000000;
     margin-top: 50px;
-    margin-left:70px;
+    margin-left:120px;
+}
+.box {
+    width: 70%;
+    float: left;
+    display: flex;
+}
+.edit {
+    ont-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 23px;
+    text-decoration: none;
+    /* identical to box height */
+    color: #000000;
+    margin-top: 50px;
+    margin-left:10px;
 }
