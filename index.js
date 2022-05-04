@@ -12,7 +12,7 @@ const app = express();
 
 // const handlebars = require('express3-handlebars').create();
 // app.engine('handlebars', handlebars.engine)
-// app.set('view-engine', 'handlebars')
+app.set('view-engine', 'ejs')
 
 // @passport and express session is used to handle the authorization processes
 app.use(express.urlencoded({extended:false}))
@@ -35,12 +35,14 @@ app.use(express.static(__dirname + "/public"));
 app.set("public", path.join(__dirname, "public"));
 
 app.use("/", require("./routes/root"));
+app.use("/users", require("./routes/userRoute"))
 app.use("/vacancies", require("./routes/vacancies"));
 app.use("/regis", require("./routes/registration"));
 app.use("/login", require("./routes/login"));
 app.use("/profile", require("./routes/profile"));
-app.use("/createvacancy", require("./routes/createvacancy"))
-app.use("/messages", require("./routes/messages.js"))
+app.use("/createvacancy", require("./routes/createvacancy"));
+// app.use("/profiles/:id", require('./routes/profilePages'));
+app.use("/messages", require("./routes/messages.js"));
 
 async function start() {
     try {

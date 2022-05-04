@@ -15,7 +15,7 @@ router
         })
                     console.log("User has been created" + response)
 
-            res.render(path.resolve("public/html/createvacanci.ejs"))
+            res.render(path.resolve("public/html/createvacanci.html"))
     })
 module.exports = router;
 

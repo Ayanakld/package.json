@@ -71,7 +71,7 @@
         </div>
 
         <div class="confirm">
-            <input type="submit" class="confirmbutton" value="Log In" >
+            <button type="submit" class="confirmbutton" > <a href="/profiles/<%%>">Log In</a> </button>
         </div>
         <div class="already">
             <a>DON`T HAVE AN ACCOUNT?  <a class="logi" href="/regis">SIGN UP</a></a>
@@ -79,32 +79,5 @@
 
     </form>
 </div>
-<!--<script>-->
-<!--    const form = document.getElementById('regbox')-->
-<!--    form.addEventListener('submit', registerUser)-->
-
-<!--    async function registerUser(event) {-->
-<!--        event.preventDefault()-->
-<!--        const email = document.getElementById('email').value-->
-<!--        const password = document.getElementById('password').value-->
-
-<!--        const result = await fetch("/login", {-->
-<!--            method: 'post',-->
-<!--            header: {-->
-<!--                'Content-Type': 'application/json'-->
-<!--            },-->
-<!--            // body: JSON.stringify({-->
-<!--            //     email,-->
-<!--            //     password-->
-<!--            // })-->
-<!--        }).then((res) => res.json())-->
-<!--        if (result.status === 'ok') {-->
-
-<!--        } else {-->
-<!--            alert(result.error)-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
-
 </body>
 </html>

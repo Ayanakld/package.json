@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs")
-const jwt = require('jsonwebtoken')
-const JWT_SECRET = "AUJsdfH@#$%^&sdfVCdfdfd%^&*()_FGFRsfdsdDYTf#$%^&*(sd^^fsERBVF%^&*FYVygesbfmsbdkjfsad"
+// needed this at the level but now i dont now why
+// const jwt = require('jsonwebtoken')
+// const JWT_SECRET = "AUJsdfH@#$%^&sdfVCdfdfd%^&*()_FGFRsfdsdDYTf#$%^&*(sd^^fsERBVF%^&*FYVygesbfmsbdkjfsad"
 var path = require('path');
 router
     .route("/")
@@ -17,14 +18,15 @@ router
         }
 
         if (await bcrypt.compare(password, user.password)) {
-            const token = jwt.sign({
+            const token = {
                 id: user._id,
                 email: user.email,
                 name: user.name,
                 surname: user.surname
-            }, JWT_SECRET)
+            }
             console.log(token)
-            return res.json({status:'ok', data: token})
+            // return res.json({status:'ok', data: token})
+            return res.sendFile(path.resolve('public/html/profile.html'))
         }
 
         res.json({status:'error', error:"Invalid email/password2"})
