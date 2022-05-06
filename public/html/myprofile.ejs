@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel=" stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css " integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous " referrerpolicy="no-referrer " >
+    <script src="https://kit.fontawesome.com/a58da105b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet " href="css/normalize.css ">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/createva.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <a href="/">RUDA</a>
+    </div>
+    <ul class="nav-links ">
+        <li>
+            <a href=" ">For employers</a>
+        </li>
+        <li>
+            <a href=" ">Freelance </a>
+        </li>
+        <li>
+            <a href=" ">Help </a>
+        </li>
+        <li>
+            <a href="/vacancies">Vacancies</a>
+        </li>
+    </ul>
+    <ul class="nav-user ">
+        <li><a href=" ">Create resume</a></li>
+        <button class="login ">
+            <a href="/login">Log In</a>
+        </button>
+    </ul>
+    <div class="toggles ">
+        <div class="account ">
+            <i class="fa fa-user-o "></i>
+        </div>
+        <div class="burger ">
+            <div class="line1 "></div>
+            <div class="line2 "></div>
+            <div class="line3 "></div>
+        </div>
+    </div>
+</nav>
+
+<div class="box">
+    <h1 class="myprof">My Profile</h1>
+    <a href="" class="edit"> <span>&#9998;</span></a>
+</div>
+<!-- ===== ===== Main-Container ===== ===== -->
+<div class="container" >
+    <!-- ===== ===== Header===== ===== -->
+
+
+
+    <!-- ===== ===== User Main-Profile ===== ===== -->
+    <section class="userProfile card">
+        <div class="profile">
+            <figure><img src="images/avatar.png" alt="profile" width="250px" height="250px"></figure>
+        </div>
+    </section>
+
+
+    <!-- ===== ===== Work & Skills Section ===== ===== -->
+    <section class="work_skills card">
+
+        <!-- ===== ===== Work Contaienr ===== ===== -->
+        <div class="work">
+            <h1 class="heading">work</h1>
+            <div class="primary">
+                <h1>Spotify New York</h1>
+                <span>Primary</span>
+                <p>170 William Street <br> New York, NY 10654-78 156-457-60</p>
+            </div>
+
+            <div class="secondary">
+                <h1>Metropolitan <br> Museum </h1>
+                <span>secondary</span>
+                <p>S34 E 64th Street<br> New York, NY 10654-78 156-457-60</p>
+            </div>
+        </div>
+
+        <!-- ===== ===== Skills Contaienr ===== ===== -->
+        <div class="skills">
+            <h1 class="heading">Skills</h1>
+            <ul>
+                <li style="--i:0">Android</li>
+                <li style="--i:1">Web Design</li>
+                <li style="--i:2">UI/UX</li>
+                <li style="--i:3">Video Editing</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ===== ===== User Details Sections ===== ===== -->
+    <section class="userDetails card">
+        <div class="userName">
+            <h1 class="name"><%= users.name %> <%= users.surname%></h1>
+            <div class="map">
+                <i class="ri-map-pin-fill ri"></i>
+                <span>Astana, AITU</span>
+            </div>
+            <p>Product Designer</p>
+        </div>
+
+        <div class="rank">
+            <h1 class="heading">Rankings</h1>
+            <span>8,6</span>
+            <div class="rating">
+                <i class="ri-star-fill rate"></i>
+                <i class="ri-star-fill rate"></i>
+                <i class="ri-star-fill rate"></i>
+                <i class="ri-star-fill rate"></i>
+                <i class="ri-star-fill underrate"></i>
+            </div>
+        </div>
+
+        <div class="btns">
+            <ul>
+                <li class="sendMsg">
+                    <i class="ri-chat-4-fill ri"></i>
+                    <a href="#">Send Message</a>
+                </li>
+
+                <li class="sendMsg active">
+                    <i class="ri-check-fill ri"></i>
+                    <a href="#">Contacts</a>
+                </li>
+
+                <li class="sendMsg">
+                    <a href="#">Report User</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ===== ===== Timeline & About Sections ===== ===== -->
+    <section class="timeline_about card">
+        <div class="tabs">
+            <ul>
+                <li class="timeline">
+                    <i class="ri-eye-fill ri"></i>
+                    <span>Timeline</span>
+                </li>
+
+                <li class="about active">
+                    <i class="ri-user-3-fill ri"></i>
+                    <span>About</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact_info">
+            <h1 class="heading">Contact Information</h1>
+            <ul>
+                <li class="phone">
+                    <h1 class="label">Phone:</h1>
+                    <span class="info">+ 777 07 681 59</span>
+                </li>
+
+                <li class="address">
+                    <h1 class="label">Address:</h1>
+                    <span class="info">AITY<br> Astana 10654-78 156-457-60</span>
+                </li>
+
+                <li class="email">
+                    <h1 class="label">E-mail:</h1>
+                    <span class="info"><%= users.email%></span>
+                </li>
+
+                <li class="site">
+                    <h1 class="label">Site:</h1>
+                    <span class="info">www.RUDA.com</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="basic_info">
+            <h1 class="heading">Basic Information</h1>
+            <ul>
+                <li class="birthday">
+                    <h1 class="label">Birthday:</h1>
+                    <span class="info"><%= users.date%></span>
+                </li>
+
+                <li class="sex">
+                    <h1 class="label">Gender:</h1>
+                    <span class="info">Trans</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+</div>
+    </div>
+    <footer class="row row-cols-5 py-5 my-5 border-top">
+        <div class="col-3">
+            <h5 class="ruda">RUDA</h5>
+            <ul class="nav flex-column" id="flex-column0">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Join The Best. Be The Best</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">INSTAGRAM TWITTER</a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <h5>Company</h5>
+            <ul class="nav flex-column" id="flex-column1">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Vacancies</a></li>
+            </ul>
+        </div>
+
+        <div class="col-3">
+            <h5>Services</h5>
+            <ul class="nav flex-column" id="flex-column2">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">For employers</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Freelance</a></li>
+            </ul>
+        </div>
+
+        <div class="col-3">
+            <h5>Contact us</h5>
+            <ul class="nav flex-column" id="flex-column3" >
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-mail: ruda@mail.ru</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Call-center: 87770707707</a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+
+</body>
+</html>
