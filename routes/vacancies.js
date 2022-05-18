@@ -1,8 +1,16 @@
 const express = require("express");
+const axios = require("axios")
 const router = express.Router();
-var path = require('path');
+const path = require('path');
 router
-    .route("/")
-    .get((req, res) => res.sendFile(path.resolve("public/html/announcements.html")))
+
+    .get("/",(req, res) =>
+        axios.get("http://localhost:3001/vacancyRoute")
+        .then(function(response) {
+            res.render(path.resolve("public/html/announcements.ejs"), {news: response.data})
+        })
+        .catch (err=> {
+            res.send(err)
+        }))
     .post((req, res) => res.send("POST"))
 module.exports = router;

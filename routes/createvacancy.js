@@ -8,14 +8,14 @@ router
     .route("/")
     .get((req, res) => res.sendFile(path.resolve("public/html/createvacanci.html")))
     .post(async (req, res) => {
-            const {country, industry, job, time, type, salary} = req.body
+            const {country, industry, company, job, time, type, salary, image, employees} = req.body
                 const response = await Basic.create({
-                country, industry, job, time, type, salary
+                country, company, industry, job, time, type, salary, image, employees
 
         })
-                    console.log("User has been created" + response)
+                    console.log("Announcement has been created" + response)
 
-            res.render(path.resolve("public/html/createvacanci.html"))
+            res.sendFile(path.resolve("public/html/createvacanci.html"))
     })
 module.exports = router;
 

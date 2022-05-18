@@ -105,62 +105,60 @@ input{
     color: #757095;
 }
 .boxone{
-    position: absolute;
+    position: relative;
     width: 1250px;
     height: 352px;
     margin-left: 125px;
     margin-top: 200px;
+    margin-bottom: -100px;
 
     background: rgba(196, 196, 196, 0.18);
     box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-.boxtwo{
-    position: absolute;
-    width: 1250px;
-    height: 352px;
-    margin-left: 125px;
-    margin-top: 600px;
+/*.boxtwo{*/
+/*    position: absolute;*/
+/*    width: 1250px;*/
+/*    height: 352px;*/
+/*    margin-left: 125px;*/
+/*    margin-top: 600px;*/
 
-    background: rgba(196, 196, 196, 0.18);
-    box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-.boxthree{
-    position: absolute;
-    width: 1250px;
-    height: 352px;
-    margin-left: 125px;
-    margin-top: 1000px;
+/*    background: rgba(196, 196, 196, 0.18);*/
+/*    box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.25);*/
+/*    border-radius: 15px;*/
+/*}*/
+/*.boxthree{*/
+/*    position: absolute;*/
+/*    width: 1250px;*/
+/*    height: 352px;*/
+/*    margin-left: 125px;*/
+/*    margin-top: 1000px;*/
 
-    background: rgba(196, 196, 196, 0.18);
-    box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
+/*    background: rgba(196, 196, 196, 0.18);*/
+/*    box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.25);*/
+/*    border-radius: 15px;*/
+/*}*/
 .jobicon1{
     position: absolute;
     margin-left: 20px;
     margin-top: 20px;
     display: flex;
 }
-.labs{
-    position: absolute;
-    width: 150px;
-    height: 24px;
-    margin-left: 140px;
-    margin-top: 40px;
-
+.labss {
+    margin-left: 150px;
+    display: block;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 19px;
-    text-align: center;
+    color: #000000;
+    padding-top: 36px;
 }
 .users{
     position: absolute;
     margin-left: 150px;
-    margin-top: 70px;
+    margin-top: 0px;
 }
 .employees{
     position: absolute;

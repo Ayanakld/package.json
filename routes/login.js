@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require("bcryptjs")
 const axios = require('axios')
-// needed this at the level but now i dont now why
+// needed this at the level but now i dont know why
 // const jwt = require('jsonwebtoken')
 // const JWT_SECRET = "AUJsdfH@#$%^&sdfVCdfdfd%^&*()_FGFRsfdsdDYTf#$%^&*(sd^^fsERBVF%^&*FYVygesbfmsbdkjfsad"
 var path = require('path');

@@ -41,7 +41,7 @@ app.use("/regis", require("./routes/registration"));
 app.use("/login", require("./routes/login"));
 app.use("/profile", require("./routes/profile"));
 app.use("/createvacancy", require("./routes/createvacancy"));
-// app.use("/profiles/:id", require('./routes/profilePages'));
+app.use("/vacancyRoute", require("./routes/vacancyRoute"))
 app.use("/messages", require("./routes/messages.js"));
 
 async function start() {
