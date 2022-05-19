@@ -50,7 +50,7 @@
 
 <div class="formes">
     <form action="/createvacancy" method="POST" class="regbox">
-        <h1 class="tittle">Create Employment Account</h1>
+        <h1 class="tittle">Create an Employer Account</h1>
         <div class="row ">
             <div class="col-3 ">
                 <p class="labels">Country:</p>
@@ -81,7 +81,17 @@
                 <p class="labels">Job:</p>
             </div>
             <div class="col-8 ">
-                <input type="text" id="job" name="job" required>
+                <select type="text" id="job" name="job" required>
+                    <option>Software</option>
+                    <option>Abuser</option>
+                    <option>Baker</option>
+                    <option>Seller-Consultant</option>
+                    <option>Selling</option>
+                    <option>CEO</option>
+                    <option>Professor</option>
+                    <option>Teaching</option>
+                    <option>Perfumer</option>
+                </select>
             </div>
         </div>
         <div class="row ">
@@ -99,7 +109,10 @@
                 <p class="labels">Type:</p>
             </div>
             <div class="col-8 ">
-                <input type="text" id="type" name="type">
+                <select name="type" id="type">
+                    <option>Based</option>
+                    <option>Remote</option>
+                </select>
             </div>
         </div>
         <div class="row ">
@@ -126,13 +139,21 @@
                 <input type="number" id="employees" name="employees">
             </div>
         </div>
+        <div class="row ">
+            <div class="col-3 ">
+                <p class="labels">Describe the job:</p>
+            </div>
+            <div class="col-8 ">
+                <input type="description" id="describe" name="description">
+            </div>
+        </div>
         <div class="confirm">
             <input type="submit" class="confirmbutton" onclick="alert('All information on DB!')" value="Submit">
         </div>
 
     </form>
 </div>
-<img src="images/yogaman.png" alt="" id="yoga">
+<!--<img src="images/yogaman.png" alt="" id="yoga">-->
 
 
 </body>

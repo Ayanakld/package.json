@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 const BasicInfoSchema = new mongoose.Schema(
     {
-        country: { type: String, required: false },
-        company: {type: String, required: false },
-        industry: {type: String, required: false},
-        job: {type:String, required: false},
-        time: { type: String, required: false},
-        type: { type: String, required: false},
-        salary: { type: Number , required: false},
-            image: { type: String , required: false},
-            employees: {type: Number, required: true, default: 1},
-
+        country: { type: String, required: true },
+        company: {type: String, required: true },
+        industry: {type: String, required: true},
+        job: {type:String, required: true},
+        time: { type: String, required: true},
+        type: { type: String, required: true},
+        salary: { type: Number , required: true},
+        image: { type: String , required: true},
+        employees: {type: Number, required: true, default: 1},
+        description:{type: String, required: true}
 
     },
     { collection: 'vacancies' }

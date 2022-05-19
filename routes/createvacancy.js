@@ -8,9 +8,9 @@ router
     .route("/")
     .get((req, res) => res.sendFile(path.resolve("public/html/createvacanci.html")))
     .post(async (req, res) => {
-            const {country, industry, company, job, time, type, salary, image, employees} = req.body
+            const {country, industry, company, job, time, type, salary, image, employees, description} = req.body
                 const response = await Basic.create({
-                country, company, industry, job, time, type, salary, image, employees
+                country, company, industry, job, time, type, salary, image, employees, description
 
         })
                     console.log("Announcement has been created" + response)

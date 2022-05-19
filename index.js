@@ -43,6 +43,7 @@ app.use("/profile", require("./routes/profile"));
 app.use("/createvacancy", require("./routes/createvacancy"));
 app.use("/vacancyRoute", require("./routes/vacancyRoute"))
 app.use("/messages", require("./routes/messages.js"));
+app.use("/filter", require("./routes/filter"));
 
 async function start() {
     try {

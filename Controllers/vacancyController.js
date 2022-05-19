@@ -1,5 +1,6 @@
 const vacancyModel = require("../models/basic_info")
 const path = require("path")
+const Basic = require("../models/basic_info");
 
 exports.find = (req, res) => {
     vacancyModel.find()
@@ -19,3 +20,41 @@ exports.findOne = async (req, res) => {
         res.status(404).json({ message: error.message});
     }
 };
+exports.filterVac = async (req, res) => {
+    const {country, industry, job, time, type} = req.body
+    let response = 0
+    if (industry && !type) {
+        response = await Basic.find({
+            country,
+            industry,
+            job,
+            time
+        })
+    }
+    if (!industry && type) {
+        response = await Basic.find({
+            country,
+            type,
+            job,
+            time
+        })
+    }
+    if (industry && type) {
+        response = await Basic.find({
+            country,
+            type,
+            job,
+            time,
+            industry
+        })
+    }
+    if (!industry && !type) {
+        response = await Basic.find({
+            country,
+            job,
+            time
+        })
+    }
+    console.log(response)
+    res.render(path.resolve("public/html/announcements.ejs"), {news: response})
+}

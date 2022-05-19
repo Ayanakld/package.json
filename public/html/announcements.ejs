@@ -10,6 +10,7 @@
         <link rel="stylesheet " href="css/announcements.css ">
         <link rel="stylesheet " href="css/navbar.css ">
         <link rel="stylesheet " href="css/normalize.css ">
+        <link rel="stylesheet " href="css/footer2.css ">
 
         <title>Vacancies</title>
 </head>
@@ -56,40 +57,40 @@
             <h1 class="text">Search for jobs</h1>
     </div>
     <section id="search" class="search-box">
-    <!--<form action="">--!>
         <input type="text"  name="term" placeholder="search for job"/>
         <a href="##" class="icon" >
             <i class="fas fa-search"></i>
         </a>
-    <!--</form>--!>
+    <!--</form>-->
     </section>
     <section>
         <ul class="search-filter">
-            <li class="list search-filter-active" data-filter="All">Browse Latest</li>
-            <li class="list" data-filter="Filtered">Filter</li>
-            <li class="list" data-filter="Saved">Saved</li>
+            <a class="list search-filter-active" data-filter="All">Browse Latest</a>
+            <a class="list"  href="/filter" data-filter="Filtered">Filter</a>
+            <a class="list" data-filter="Saved">Saved</a>
         </ul>
     </section>
 
+    <% if (news.length > 0) {%>
 <% for (var i=0; i<news.length; i++) {%>
         <div class="boxone">
             <img class="jobicon1" width="100px" height="100px" src="<%=news[i].image%>">
-            <p class="labss"><%= news[i].company%></p>
+            <p class="labss"><%= news[i].company%> <%= news[i].country%></p>
             <img class="users" width="20px" height="20px" src="images\users.png">
             <p class="employees"><%=news[i].employees %> employees</p>
             <img  class="active" src="images\active.png">
-            <p class="descr"><%=news[i].job%></p>
+            <p class="descr"><%=news[i].description%></p>
             <p class="learn">Learn more</p>
 
             <div class="appone">
 
                 <p class="time"><%=news[i].time%></p>
-                <p class="jobone"><%=news[i].type%></p>
+                <p class="jobone"><%=news[i].job%></p>
                 <div class="salary">
                     <p class="realsalary"><%=news[i].salary%></p>
                 </div>
                 <div class="type">
-                    <p class="realtype"><%=news[i].time%></p>
+                    <p class="realtype"><%=news[i].type%></p>
                 </div>
                 <img class="star" src="images\staar.png">
                 <button class="apply" name="appl" type="button">
@@ -100,14 +101,15 @@
         </div>
 
     <%}%>
-
-    <img class="footer" src="images\footer.png">
+    <%} else {%>
+        <h1 class="sorry">Sorry, no vacancies that satisfy your requirements... Calm down and stay in bed</h1>
+<%}%>
 </div>
 
 
+<div id="footer" class="container">
 
-
-
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $(document).on('click', '.search-filter li', function (){
