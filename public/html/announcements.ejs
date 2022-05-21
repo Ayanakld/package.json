@@ -57,10 +57,13 @@
             <h1 class="text">Search for jobs</h1>
     </div>
     <section id="search" class="search-box">
-        <input type="text"  name="term" placeholder="search for job"/>
-        <a href="##" class="icon" >
-            <i class="fas fa-search"></i>
-        </a>
+        <form action="/search" method="post">
+            <input type="text"  name="job" placeholder="search for job"/>
+            <input type="submit" value="Search" class="searchbtn">
+<!--            <a method="post" class="icon">-->
+<!--                <i class="fas fa-search"></i>-->
+<!--            </a>    -->
+        </form>
     <!--</form>-->
     </section>
     <section>

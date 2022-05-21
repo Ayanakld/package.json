@@ -10,7 +10,11 @@ const BasicInfoSchema = new mongoose.Schema(
         salary: { type: Number , required: true},
         image: { type: String , required: true},
         employees: {type: Number, required: true, default: 1},
-        description:{type: String, required: true}
+        description:{type: String, required: true},
+            createdAt:{
+                type:Date,
+                default: Date.now
+            }
 
     },
     { collection: 'vacancies' }

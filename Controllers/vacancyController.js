@@ -3,7 +3,7 @@ const path = require("path")
 const Basic = require("../models/basic_info");
 
 exports.find = (req, res) => {
-    vacancyModel.find()
+    vacancyModel.find().sort({createdAt:'desc'})
         .then(vacancies=>{
             res.send(vacancies)
         })
@@ -56,5 +56,10 @@ exports.filterVac = async (req, res) => {
         })
     }
     console.log(response)
+    res.render(path.resolve("public/html/announcements.ejs"), {news: response})
+}
+exports.search = async (req, res) => {
+    const job = req.body.job
+    const response = await Basic.find({job})
     res.render(path.resolve("public/html/announcements.ejs"), {news: response})
 }
