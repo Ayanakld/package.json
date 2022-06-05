@@ -45,6 +45,7 @@ app.use("/vacancyRoute", require("./routes/vacancyRoute"))
 app.use("/messages", require("./routes/messages.js"));
 app.use("/filter", require("./routes/filter"));
 app.use("/search", require("./routes/search.js"));
+app.use("/help", require("./routes/help.js"))
 
 async function start() {
     try {
