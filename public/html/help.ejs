@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--<script>
+        $(function (){
+            $("#visible").click(function(){
+                $("#invisible").toggleClass("show");
+            })
+        })
+    </script>
+    <style>
+        .hide{display: none;}
+        .show{display: block;}
+    </style>-->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet " href="css/normailze.css">
+</head>
+<body>
+<div class="hero" >
+
+    <nav>
+        <div class="logo">
+            <a href="/">RUDA</a>
+        </div>
+        <ul class="nav-links ">
+            <li>
+                <a href=" ">For employers</a>
+            </li>
+            <li>
+                <a href=" ">Freelance </a>
+            </li>
+            <li>
+                <a href=" ">Help </a>
+            </li>
+            <li>
+                <a href="/vacancies">Vacancies</a>
+            </li>
+        </ul>
+        <ul class="nav-user ">
+            <li><a href=" ">Create resume</a></li>
+            <button class="login ">
+                <a href="/login">Log In</a>
+            </button>
+        </ul>
+        <div class="toggles ">
+            <div class="account ">
+                <i class="fa fa-user-o"></i>
+            </div>
+            <div class="burger ">
+                <div class="line1 "></div>
+                <div class="line2 "></div>
+                <div class="line3 "></div>
+            </div>
+        </div>
+    </nav>
+    <div class = "row" id="header">
+        <h1 class="text">Search for jobs</h1>
+    </div>
+    <p id="visible">How to create a resume?</p>
+    <p id="invisible" class="hide">In the upper right corner, next to the registration button, there is a "Create resume" button. You can click on it and you will be successfully redirected to the resume creation page.</p>
+    <p id="visible">Where to search for vacancies?</p>
+    <p id="invisible" class="hide">At the top of the menu section there will be a Vacancies button, when you click on it you will be successfully redirected to the page where all jobs will be posted. You can filter or just search for what you need.</p>
+    <p id="visible">Could I upload a vacancy as an employer?</p>
+    <p id="invisible" class="hide">Yes, of course! At the top of the menu section there will be a For employers button, when you click on it you will be successfully redirected to the page. Here you should fulfill all the empty fields and push the button. Hurray! You created a vacancy!</p>
+    <p id="visible">With whom I should contact if I want to cooperate with your service?</p>
+    <p id="invisible" class="hide">You can contact with our service through e-mail: ruda@mail.ru. Our managers will answer as soon as possible!</p>
+</div>
+<footer class="row row-cols-5 py-5 my-5 border-top">
+    <div class="col-3">
+        <h5 class="ruda">RUDA</h5>
+        <ul class="nav flex-column" id="flex-column0">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Join The Best. Be The Best</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">INSTAGRAM TWITTER</a></li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <h5>Company</h5>
+        <ul class="nav flex-column" id="flex-column1">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Vacancies</a></li>
+        </ul>
+    </div>
+
+    <div class="col-3">
+        <h5>Services</h5>
+        <ul class="nav flex-column" id="flex-column2">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">For employers</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Freelance</a></li>
+        </ul>
+    </div>
+
+    <div class="col-3">
+        <h5>Contact us</h5>
+        <ul class="nav flex-column" id="flex-column3" >
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-mail: ruda@mail.ru</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Call-center: 87770707707</a></li>
+        </ul>
+    </div>
+</footer>
+<div class="container">
+    <footer class="py-3 my-4">
+        <p class="text-center text-muted">&copy;Copyright Ruda 2022. All Rights Reserved.</p>
+    </footer>
+</div>
+<script>
+    $(function (){
+        $("#visible").click(function(){
+            $("#invisible").toggleClass("show");
+        })
+    })
+</script>
+<style>
+    .hide{display: none;}
+    .show{display: block;}
+</style>
+</body>
+</html>
